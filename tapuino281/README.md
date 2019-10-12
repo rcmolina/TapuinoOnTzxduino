@@ -16,8 +16,8 @@ Portions of this code are copyright by their respective owners:
  * I2C code: Peter Fleury <pfleury@gmx.ch>  http://jump.to/fleury
  * LCD code: conversion of the Arduino code apparently by DFRobot? (converted to C by me)
 
-
-* 2.81 changes: //**
+* V2.51 Menu option for Motor control so it can be used with tzxduino handware to feed a zx-uno
+* V2.81 changed files: //**
 
 lcdutils.c
 memstrings.h
