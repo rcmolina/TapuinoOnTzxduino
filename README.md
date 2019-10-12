@@ -17,7 +17,7 @@ Portions of this code are copyright by their respective owners:
  * LCD code: conversion of the Arduino code apparently by DFRobot? (converted to C by me)
 
 * V2.51 Menu option for Motor control so it can be used with tzxduino handware to feed a zx-uno
-* 2.81 changed files: //**
+* V2.81 changed files: //**
 
 lcdutils.c
 memstrings.h
