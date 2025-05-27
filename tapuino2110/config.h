@@ -45,13 +45,6 @@
 #define TWI_PIN_SCL         5
 
 // port definitions, change for different wiring
-#define SENSE_PORT          PORTD
-#define SENSE_DDR           DDRD
-#define SENSE_PIN           5
-#define SENSE_ON()          SENSE_PORT &= ~_BV(SENSE_PIN)
-#define SENSE_OFF()         SENSE_PORT |=  _BV(SENSE_PIN)
-
-// port definitions, change for different wiring
 //#define TAPE_READ_PORT      PORTD
 //#define TAPE_READ_DDR       DDRD
 //#define TAPE_READ_PIN       3
@@ -62,7 +55,6 @@
 #define TAPE_READ_PINS      PINB
 #define TAPE_READ_LOW()     TAPE_READ_PORT &= ~_BV(TAPE_READ_PIN)
 #define TAPE_READ_HIGH()    TAPE_READ_PORT |=  _BV(TAPE_READ_PIN)
-
 
 #define TAPE_WRITE_PORT     PORTB
 #define TAPE_WRITE_DDR      DDRB
