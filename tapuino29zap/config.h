@@ -29,8 +29,10 @@
 #define LCD_BIT_DATA2       6    // 4 bit data, bit 2
 #define LCD_BIT_DATA3       7    // 4 bit data, bit 3
 // LCD dimensions config
-#define LCD_NUM_LINES       2    // number of display lines on the LCD
-#define MAX_LCD_LINE_LEN    16   // max number of characters on a line
+//#define LCD_NUM_LINES       2    // number of display lines on the LCD
+//#define MAX_LCD_LINE_LEN    16   // max number of characters on a line
+#define LCD_NUM_LINES       4     //was 2    // number of display lines on the LCD
+#define MAX_LCD_LINE_LEN    21    //was 16   // max number of characters on a line
 
 // Timing constant defaults, these will only apply until eeprom values are saved
 #define TICKER_RATE         250  // milliseconds, granularity 10ms
