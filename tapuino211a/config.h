@@ -1,4 +1,5 @@
 #define TZXDUINO
+  #define NO_MOTORCTL
 
 #ifndef _CONFIG_H
 #define _CONFIG_H
@@ -88,11 +89,19 @@
 
 #ifdef TZXDUINO
 #define MOTOR_PIN           6
-#define MOTOR_IS_OFF()      0
-#define MOTOR_MASK          0     //**
+
+#ifdef NO_MOTORCTL
+  #define MOTOR_IS_OFF()      0
+  #define MOTOR_MASK          0     //**  
+#else
+  #define MOTOR_IS_OFF()      (MOTOR_PINS & _BV(MOTOR_PIN) && g_motor_mask)   //**
+  #define MOTOR_MASK          1     //**
+#endif
+
 #define CONTROL_PIN0        4
 #define CONTROL_PIN1        3
-#else
+
+#else   //Tapuino
 #define MOTOR_PIN           4
 #define MOTOR_IS_OFF()      (MOTOR_PINS & _BV(MOTOR_PIN) && g_motor_mask)   //**
 #define MOTOR_MASK          1     //**

@@ -739,11 +739,18 @@ void tapuino_run()
   FILINFO file_info;
   file_info.lfname = (TCHAR*)g_fat_buffer;
   file_info.lfsize = sizeof(g_fat_buffer);
-
+/*
   if (!tapuino_hardware_setup()) {
     lcd_title_P(S_INIT_FAILED);
     return;
   }
-  
+*/
+
+  while (!tapuino_hardware_setup()) {
+    lcd_title_P(S_INIT_FAILED);
+    //delay(1000);
+    _delay_ms(1000);
+  }
+
   main_menu(&file_info);
 }
